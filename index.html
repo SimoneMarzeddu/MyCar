@@ -1,0 +1,77 @@
+<html>
+
+  <head>
+    <style>
+    p{
+      width: 80%;
+    }
+    </style>
+  </head>
+
+  <body>
+<h1> MyCar: class project corso di Computer Grafica AA 2021/22</h1>
+ <a href="renderer_00/index.html"> <b> Renderer_00 </b> </a>
+    <p>
+      <ol>
+        <li>
+          use <code> Renderer.car.frame </code> to replace the white triangle with the car you modeled in code1_transformations
+        </li>
+        <li>
+          <p>implement the chase camera>
+          The chase camera is camera that follows the car from behind and slightly above, as shown in the figure. You need to define this camera in the object frame of the car and then transform it into world space. Then you only need to setup the view matrix with the resulting camera. 
+          The numbers shown in the illustration below are justs example, place you chase camera where you like</p>
+          <img src="images/chaseCamera.jpg" width="500px">
+          <img src="images/chaseCameraR.jpg" width="200px">
+        </li>
+      </ol>
+    </p>
+
+<a href="renderer_01/index.html"> <b> Renderer_01 </b> </a>
+    <p> 
+      <ul>
+        <li>
+        use <code> Renderer.car.wheelsAngle</code> to rotate the front wheels so to how then the car is turning </li>
+        <li>
+        use <code> Renderer.car.speed</code> to rotate all  wheels according to the speed of the car (and the diameter of your wheels). It does not need to be phyiscally accurate</li>
+        <li>
+        Add some form of lighting computation (Phong lighting is fine) using any shading mode you like.   <ul>
+          <li>Use <code> Game.scene.weather.sunLightDirection</code> for the direction of the sun to use a directional light.  </li>
+          <li>
+            <code> Game.scene.lamps</code> is an array of streetlamps, each lamp has a position and an height value. Place one spothlight for each lamp pointing down
+          </li>
+            </ul>
+      </ul> 
+      
+    </p>
+<a href="renderer_02/index.html"> <b> Renderer_02 </b> </a>
+    <p> 
+      <ol>
+        <li>
+        <b>Add textures to the scene elements</b>: the ground, the track and the buildings.<br>
+        The elements <code>Game.scene.trackObj</code> and <code>Game.scene.groundObj</code> already have texture coordinates in the buffer <code> texCoords</code>
+        </li><br>
+        The only thing to do is load the image, create the texture and access it from the program shader. It is all contained in the code 
+        <a  href="https://replit.com/@727AA2122CG/code-6-class-Texture-mapping-bump-normal-parallax-mapping#index.html">code-6-class-Texture-mapping-bump-normal-parallax-mapping</a>
+			<img src="images/trackTex.png" width = "50%"><br>
+		  Each building is now split in <i> facades</i> and <i>roof</i>: <br>
+		  <code> Game.scene.buildingsObjTex[i] </code>: facades of the ith building<br>
+		  <code> Game.scene.buildingsObjTex[i].roof </code>: roof of the ith building<br>
+		  <img src="images/buildingTex.png" width = "50%" >
+		  All buildings have 4 facades and their texture coordinates are found by unrolling them in texture space.<br>
+		  The roof are just a quadrilateral.<br>
+		  A sample of images for the ground, the track, the facades and the roofs can be found in <code> common/textures </code> or you can find textures of your liking on the internet, for example<br>
+		  <a href="https://archivetextures.net/">https://archivetextures.net</a><br>
+		 <a href="http://texturer.com/">http://texturer.com/</a><br>
+		 or just google for it, of make your own..
+        </li>
+        <li>
+        <b>Add
+        
+        </li>
+      </ol> 
+      
+    </p>
+
+  </body>
+</html>
+
