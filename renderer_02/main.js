@@ -1284,7 +1284,7 @@ on_keyup = function (e) {
 
 	if (e.key == ' ') {
 		Renderer.currentCamera = (Renderer.currentCamera + 1) % Renderer.cameras.length;
-		log("Cambio camera: " + Renderer.currentCamera);
+		log("CAMBIO Camera effettuato: Camera " + Renderer.currentCamera);
 	}
 	if (e.key == 'w' || e.key == 'a' || e.key == 's' || e.key == 'd') {
 		FreeCam.keys[e.key] = false;
